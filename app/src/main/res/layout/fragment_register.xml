@@ -1,79 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/image_main_background"
+    android:orientation="vertical"
     android:paddingHorizontal="16dp"
     android:paddingTop="280dp"
+    tools:background="@drawable/image_main_background"
     tools:context=".ui.auth.fragments.register.RegisterFragment">
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/username_container_til"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:hint="@string/username"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginTop="16dp"
+        android:hint="@string/username">
 
-        <EditText
+        <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:fontFamily="@font/poppins_medium"
+            android:inputType="textWebEmailAddress"
+            android:textSize="18sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/email_container_til"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:hint="@string/email"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/username_container_til">
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginTop="32dp"
+        android:hint="@string/email">
 
-        <EditText
+        <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:fontFamily="@font/poppins_medium"
+            android:inputType="textWebEmailAddress"
+            android:textSize="18sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/password_container_til"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginTop="32dp"
         android:hint="@string/password"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/email_container_til">
+        app:endIconMode="password_toggle">
 
-        <EditText
+        <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:fontFamily="@font/poppins_medium"
+            android:inputType="textPassword"
+            android:textSize="18sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/login_btn"
-
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="80dp"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginTop="92dp"
         android:background="@drawable/shape_button_background"
-        android:paddingHorizontal="32dp"
         app:cardBackgroundColor="@color/white"
         app:cardCornerRadius="5dp"
         app:cardElevation="5dp"
         app:contentPaddingLeft="32dp"
-        app:contentPaddingRight="32dp"
-        app:layout_constraintBottom_toBottomOf="parent">
+        app:contentPaddingRight="32dp">
 
         <TextView
             android:layout_width="wrap_content"
@@ -90,6 +95,7 @@
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:layout_gravity="end|center_vertical"
+            android:importantForAccessibility="no"
             android:scaleType="center"
             android:src="@drawable/ic_arrow_forward"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -106,9 +112,6 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-
     </com.google.android.material.card.MaterialCardView>
-
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
 

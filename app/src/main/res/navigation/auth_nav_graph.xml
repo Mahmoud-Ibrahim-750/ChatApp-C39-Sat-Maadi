@@ -7,7 +7,7 @@
     <fragment
         android:id="@+id/loginFragment"
         android:name="com.mis.route.chatapp.ui.auth.fragments.login.LoginFragment"
-        android:label="fragment_login"
+        android:label="Login"
         tools:layout="@layout/fragment_login" >
         <action
         android:id="@+id/action_loginFragment_to_registerFragment"
@@ -16,6 +16,6 @@
     <fragment
         android:id="@+id/registerFragment"
         android:name="com.mis.route.chatapp.ui.auth.fragments.register.RegisterFragment"
-        android:label="fragment_register"
+        android:label="Create Account"
         tools:layout="@layout/fragment_register" />
 </navigation>
